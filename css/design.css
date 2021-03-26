@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Nunito;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.front-page {
+  padding-left: 2%;
+}
+
+.front-page #navigation {
+  font-size: 2em;
+  padding-top: 1%;
+}
+
+.front-page #navigation .display-6 {
+  font-size: 2.5rem;
+  margin-right: 2%;
+}
+
+.front-page #navigation a {
+  padding-right: 1%;
+}
+
+.front-page #mainMsg {
+  word-spacing: 50%;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-shadow: 3px 3px grey;
+  padding-top: 5%;
+  -webkit-animation: showTextAnim 1.5s forwards;
+          animation: showTextAnim 1.5s forwards;
+  opacity: 0%;
+}
+
+.front-page label {
+  font-size: 2.5rem;
+  color: grey;
+  margin-top: 1%;
+  opacity: 0%;
+  -webkit-animation: showTextAnim 1.5s forwards;
+          animation: showTextAnim 1.5s forwards;
+}
+
+.front-page button {
+  font-size: 1.5rem;
+  margin-top: 1%;
+  opacity: 0%;
+  -webkit-animation: showTextAnim 1.5s forwards;
+          animation: showTextAnim 1.5s forwards;
+}
+
+@-webkit-keyframes showTextAnim {
+  from {
+    opacity: 0%;
+    left: -100%;
+  }
+  to {
+    opacity: 100%;
+    margin-right: 0%;
+  }
+}
+
+@keyframes showTextAnim {
+  from {
+    opacity: 0%;
+    left: -100%;
+  }
+  to {
+    opacity: 100%;
+    margin-right: 0%;
+  }
+}
+
+.front-page .offers {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  max-width: 45%;
+  min-width: 45%;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  margin-top: 15%;
+  background-color: none;
+}
+
+.front-page .offers .card {
+  border: 0px solid transparent;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.front-page .offers .card img {
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.front-page .images .firstLine {
+  position: absolute;
+  left: 45%;
+  -webkit-animation: firstLineAnim 1s ease-in-out forwards;
+          animation: firstLineAnim 1s ease-in-out forwards;
+  background-attachment: local;
+}
+
+.front-page .images .secondLine {
+  position: absolute;
+  left: 55%;
+  -webkit-animation: secondLineAnim 1.5s ease-in-out forwards;
+          animation: secondLineAnim 1.5s ease-in-out forwards;
+}
+
+.front-page .images .thirdLine {
+  position: absolute;
+  left: 65%;
+  -webkit-animation: thirdLineAnim 2s ease-in-out forwards;
+          animation: thirdLineAnim 2s ease-in-out forwards;
+}
+
+.front-page .images .lucian {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 1;
+  opacity: 0%;
+  -webkit-animation: lucianAnim 1s 1.5s ease forwards;
+          animation: lucianAnim 1s 1.5s ease forwards;
+}
+
+.front-page .blackBack {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  -webkit-transform: rotate(-65deg);
+          transform: rotate(-65deg);
+  z-index: -1;
+  top: 0%;
+  position: absolute;
+  left: 35%;
+  opacity: 0%;
+  -webkit-animation: blackBoxAnim 1s ease forwards;
+          animation: blackBoxAnim 1s ease forwards;
+}
+
+@-webkit-keyframes blackBoxAnim {
+  from {
+    opacity: 0%;
+    left: 100%;
+  }
+  to {
+    opacity: 100%;
+    left: 35%;
+  }
+}
+
+@keyframes blackBoxAnim {
+  from {
+    opacity: 0%;
+    left: 100%;
+  }
+  to {
+    opacity: 100%;
+    left: 35%;
+  }
+}
+
+@-webkit-keyframes firstLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes firstLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@-webkit-keyframes secondLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes secondLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@-webkit-keyframes thirdLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@keyframes thirdLineAnim {
+  from {
+    margin-top: 80%;
+  }
+  to {
+    margin-top: -50%;
+  }
+}
+
+@-webkit-keyframes lucianAnim {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    left: 45%;
+  }
+}
+
+@keyframes lucianAnim {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    left: 45%;
+  }
+}
+/*# sourceMappingURL=design.css.map */
