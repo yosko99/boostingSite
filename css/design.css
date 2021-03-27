@@ -28,7 +28,7 @@ a:hover {
 }
 
 .front-page #navigation {
-  font-size: 2em;
+  font-size: 2rem;
   padding-top: 1%;
 }
 
@@ -48,8 +48,8 @@ a:hover {
   font-size: 4rem;
   text-shadow: 3px 3px grey;
   padding-top: 5%;
-  -webkit-animation: showTextAnim 1.5s forwards;
-          animation: showTextAnim 1.5s forwards;
+  -webkit-animation: showTextAnim 2s forwards;
+          animation: showTextAnim 2s forwards;
   opacity: 0%;
 }
 
@@ -58,16 +58,16 @@ a:hover {
   color: grey;
   margin-top: 1%;
   opacity: 0%;
-  -webkit-animation: showTextAnim 1.5s forwards;
-          animation: showTextAnim 1.5s forwards;
+  -webkit-animation: showTextAnim 2s forwards;
+          animation: showTextAnim 2s forwards;
 }
 
 .front-page button {
   font-size: 1.5rem;
   margin-top: 1%;
   opacity: 0%;
-  -webkit-animation: showTextAnim 1.5s forwards;
-          animation: showTextAnim 1.5s forwards;
+  -webkit-animation: showTextAnim 2s forwards;
+          animation: showTextAnim 2s forwards;
 }
 
 @-webkit-keyframes showTextAnim {
@@ -123,7 +123,6 @@ a:hover {
 
 .front-page .images .firstLine {
   position: absolute;
-  left: 45%;
   -webkit-animation: firstLineAnim 1s ease-in-out forwards;
           animation: firstLineAnim 1s ease-in-out forwards;
   background-attachment: local;
@@ -131,16 +130,14 @@ a:hover {
 
 .front-page .images .secondLine {
   position: absolute;
-  left: 55%;
-  -webkit-animation: secondLineAnim 1.5s ease-in-out forwards;
-          animation: secondLineAnim 1.5s ease-in-out forwards;
+  -webkit-animation: secondLineAnim 1s ease-in-out forwards;
+          animation: secondLineAnim 1s ease-in-out forwards;
 }
 
 .front-page .images .thirdLine {
   position: absolute;
-  left: 65%;
-  -webkit-animation: thirdLineAnim 2s ease-in-out forwards;
-          animation: thirdLineAnim 2s ease-in-out forwards;
+  -webkit-animation: thirdLineAnim 1s ease-in-out forwards;
+          animation: thirdLineAnim 1s ease-in-out forwards;
 }
 
 .front-page .images .lucian {
@@ -149,8 +146,11 @@ a:hover {
   left: 40%;
   z-index: 1;
   opacity: 0%;
-  -webkit-animation: lucianAnim 1s 1.5s ease forwards;
-          animation: lucianAnim 1s 1.5s ease forwards;
+  -webkit-animation: lucianAnim 1s 0.5s ease forwards;
+          animation: lucianAnim 1s 0.5s ease forwards;
+  max-height: 55%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .front-page .blackBack {
@@ -192,55 +192,67 @@ a:hover {
 
 @-webkit-keyframes firstLineAnim {
   from {
-    margin-top: 80%;
+    top: 100%;
+    left: 30%;
   }
   to {
-    margin-top: -50%;
+    top: -10%;
+    left: 45%;
   }
 }
 
 @keyframes firstLineAnim {
   from {
-    margin-top: 80%;
+    top: 100%;
+    left: 30%;
   }
   to {
-    margin-top: -50%;
+    top: -10%;
+    left: 45%;
   }
 }
 
 @-webkit-keyframes secondLineAnim {
   from {
-    margin-top: 80%;
+    top: -100%;
+    left: 85%;
   }
   to {
-    margin-top: -50%;
+    left: 55%;
+    top: -10%;
   }
 }
 
 @keyframes secondLineAnim {
   from {
-    margin-top: 80%;
+    top: -100%;
+    left: 85%;
   }
   to {
-    margin-top: -50%;
+    left: 55%;
+    top: -10%;
   }
 }
 
 @-webkit-keyframes thirdLineAnim {
   from {
-    margin-top: 80%;
+    top: 100%;
+    left: 45%;
   }
   to {
-    margin-top: -50%;
+    top: -10%;
+    left: 65%;
   }
 }
 
 @keyframes thirdLineAnim {
   from {
-    margin-top: 80%;
+    top: 100%;
+    left: 45%;
   }
   to {
-    margin-top: -50%;
+    top: -10%;
+    left: 65%;
   }
 }
 

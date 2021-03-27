@@ -7,6 +7,7 @@
 
 html, body {height: 100%; overflow: hidden}
 
+
 a{
     text-decoration: none;
     color: black;
@@ -20,7 +21,7 @@ a:hover{
 .front-page{
     padding-left:2%;
     #navigation{
-        font-size: 2em;
+        font-size: 2rem;
         padding-top:1%;
         .display-6{
             font-size:2.5rem;
@@ -37,7 +38,7 @@ a:hover{
         font-size: 4rem;
         text-shadow: 3px 3px grey;
         padding-top:5%;
-        animation: showTextAnim 1.5s forwards;
+        animation: showTextAnim 2s forwards;
         opacity: 0%;
     }
     label{
@@ -45,13 +46,13 @@ a:hover{
         color:grey;
         margin-top: 1%;
         opacity: 0%;
-        animation: showTextAnim 1.5s forwards;
+        animation: showTextAnim 2s forwards;
     }
     button{
         font-size: 1.5rem;
         margin-top: 1%;
         opacity: 0%;
-        animation: showTextAnim 1.5s forwards;
+        animation: showTextAnim 2s forwards;
     }
 
     @keyframes showTextAnim {
@@ -87,20 +88,20 @@ a:hover{
     .images{
         .firstLine{
             position: absolute;
-            left:45%;
+            // left:45%;
             animation: firstLineAnim 1s ease-in-out forwards;
             background-attachment:local;
         }
         .secondLine{
             position: absolute;
-            left:55%;
-            animation: secondLineAnim 1.5s ease-in-out forwards;
+            // left:55%;
+            animation: secondLineAnim 1s ease-in-out forwards;
         }
         
         .thirdLine{
             position: absolute;
-            left:65%;
-            animation: thirdLineAnim 2s ease-in-out forwards;
+            // left:65%;
+            animation: thirdLineAnim 1s ease-in-out forwards;
         }
         .lucian{
             position: absolute;
@@ -108,7 +109,9 @@ a:hover{
             left:40%;
             z-index: 1;
             opacity: 0%;
-            animation: lucianAnim 1s 1.5s ease forwards;
+            animation: lucianAnim 1s 0.5s ease forwards;
+            max-height: 55%;
+            object-fit: contain;
         }
     }
 
@@ -138,28 +141,35 @@ a:hover{
 
     @keyframes firstLineAnim{
         from{
-            margin-top: 80%;
+            top:100%;
+            left:30%;
         }
         to{
-            margin-top: -50%;
+            top:-10%;
+            left:45%;
         }
     }
     
     @keyframes secondLineAnim{
         from{
-            margin-top: 80%;
+            top:-100%;
+            left:85%;
+            // asd
         }
         to{
-            margin-top: -50%;
+            left:55%;
+            top:-10%;
         }
     }
     
     @keyframes thirdLineAnim{
         from{
-            margin-top: 80%;
+            top:100%;
+            left:45%;
         }
         to{
-            margin-top: -50%;
+            top:-10%;
+            left:65%;
         }
     }
     
@@ -171,6 +181,6 @@ a:hover{
             opacity: 100%;
             left:45%;
         }
-    }
+    }    
 }
 
