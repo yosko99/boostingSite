@@ -8,7 +8,6 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 a {
@@ -23,22 +22,29 @@ a:hover {
   color: grey;
 }
 
-.front-page {
-  padding-left: 2%;
+.visible {
+  display: block;
 }
 
-.front-page #navigation {
-  font-size: 2rem;
+.navigation {
+  font-size: 1.5em;
   padding-top: 1%;
+  color: red;
+  z-index: 1;
 }
 
-.front-page #navigation .display-6 {
-  font-size: 2.5rem;
+.navigation .display-6 {
+  font-size: 1.5em;
   margin-right: 2%;
 }
 
-.front-page #navigation a {
+.navigation a {
   padding-right: 1%;
+}
+
+.front-page {
+  display: block;
+  padding-left: 2em;
 }
 
 .front-page #mainMsg {
@@ -122,26 +128,26 @@ a:hover {
 }
 
 .front-page .images .firstLine {
-  position: absolute;
+  position: fixed;
   -webkit-animation: firstLineAnim 1s ease-in-out forwards;
           animation: firstLineAnim 1s ease-in-out forwards;
   background-attachment: local;
 }
 
 .front-page .images .secondLine {
-  position: absolute;
+  position: fixed;
   -webkit-animation: secondLineAnim 1s ease-in-out forwards;
           animation: secondLineAnim 1s ease-in-out forwards;
 }
 
 .front-page .images .thirdLine {
-  position: absolute;
+  position: fixed;
   -webkit-animation: thirdLineAnim 1s ease-in-out forwards;
           animation: thirdLineAnim 1s ease-in-out forwards;
 }
 
 .front-page .images .lucian {
-  position: absolute;
+  position: fixed;
   top: 25%;
   left: 40%;
   z-index: 1;
@@ -161,7 +167,7 @@ a:hover {
           transform: rotate(-65deg);
   z-index: -1;
   top: 0%;
-  position: absolute;
+  position: fixed;
   left: 35%;
   opacity: 0%;
   -webkit-animation: blackBoxAnim 1s ease forwards;
@@ -273,6 +279,247 @@ a:hover {
   to {
     opacity: 100%;
     left: 45%;
+  }
+}
+
+.secondPage {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  z-index: -10;
+  display: none;
+}
+
+.secondPage .navigation {
+  -webkit-animation: animBoxAnim 5s ease forwards;
+          animation: animBoxAnim 5s ease forwards;
+  padding-left: 2em;
+}
+
+.secondPage #backBtn {
+  padding: 0;
+  margin: 0;
+  top: 50vh;
+  left: 0%;
+  position: absolute;
+  padding: 1em;
+  width: 5%;
+  -webkit-animation: animBoxAnim 2s ease forwards;
+          animation: animBoxAnim 2s ease forwards;
+  cursor: pointer;
+}
+
+.secondPage .offerBar {
+  width: 100%;
+  height: 60vh;
+}
+
+.secondPage .secondBlackBar {
+  background-repeat: no-repeat;
+  padding-top: 6em;
+  -webkit-clip-path: circle(0% at 50% 0%);
+          clip-path: circle(0% at 50% 0%);
+  -webkit-animation: animBoxAnim2 2s 1s ease forwards;
+          animation: animBoxAnim2 2s 1s ease forwards;
+}
+
+.secondPage .row {
+  margin: auto;
+  padding: 1em;
+}
+
+.secondPage h1 {
+  text-align: center;
+  padding: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  -webkit-animation: animBoxAnim 2s ease forwards;
+          animation: animBoxAnim 2s ease forwards;
+}
+
+.secondPage .card:hover {
+  background-color: black;
+  color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.secondPage .card:hover .card-img-top {
+  content: url("/img/fb_light.png");
+}
+
+.secondPage .card:hover .btn {
+  background-color: white;
+  color: black;
+}
+
+.secondPage .card {
+  margin: auto;
+  -webkit-animation: cardBoxAnim 2.5s 0.5s ease forwards;
+          animation: cardBoxAnim 2.5s 0.5s ease forwards;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-clip-path: circle(0% at 0% 0%);
+          clip-path: circle(0% at 0% 0%);
+}
+
+.secondPage .card .btn {
+  border-radius: 9999px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.secondPage .card .card-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.secondPage .card img {
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.secondPage .card1 {
+  -webkit-animation: cardBoxAnim 1.5s 0.4s ease forwards;
+          animation: cardBoxAnim 1.5s 0.4s ease forwards;
+}
+
+.secondPage .card2 {
+  -webkit-animation: cardBoxAnim 1.5s 0.6s ease forwards;
+          animation: cardBoxAnim 1.5s 0.6s ease forwards;
+}
+
+.secondPage .card3 {
+  -webkit-animation: cardBoxAnim 1.5s 0.8s ease forwards;
+          animation: cardBoxAnim 1.5s 0.8s ease forwards;
+}
+
+@-webkit-keyframes animBoxAnim {
+  from {
+    -webkit-clip-path: circle(0% at 0% 0%);
+            clip-path: circle(0% at 0% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes animBoxAnim {
+  from {
+    -webkit-clip-path: circle(0% at 0% 0%);
+            clip-path: circle(0% at 0% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@-webkit-keyframes animBoxAnim2 {
+  from {
+    -webkit-clip-path: circle(0% at 50% 0%);
+            clip-path: circle(0% at 50% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes animBoxAnim2 {
+  from {
+    -webkit-clip-path: circle(0% at 50% 0%);
+            clip-path: circle(0% at 50% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@-webkit-keyframes cardBoxAnim {
+  from {
+    -webkit-clip-path: circle(0% at 0% 0%);
+            clip-path: circle(0% at 0% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes cardBoxAnim {
+  from {
+    -webkit-clip-path: circle(0% at 0% 0%);
+            clip-path: circle(0% at 0% 0%);
+  }
+  to {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.thirdPage {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thirdPage img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+  width: 15vh;
+}
+
+.thirdPage img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.thirdPage h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+.thirdPage .items-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: imgScrollAnim 30s ease-in-out infinite;
+          animation: imgScrollAnim 30s ease-in-out infinite;
+  position: relative;
+}
+
+@-webkit-keyframes imgScrollAnim {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -200%;
+  }
+}
+
+@keyframes imgScrollAnim {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -200%;
   }
 }
 /*# sourceMappingURL=design.css.map */
