@@ -344,7 +344,7 @@ a:hover {
 }
 
 .secondPage .card:hover .card-img-top {
-  content: url("/img/fb_light.png");
+  content: url("img/fb_light.png");
 }
 
 .secondPage .card:hover .btn {
